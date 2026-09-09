@@ -1,13 +1,17 @@
 /* ============ VARIÁVEIS ============ */
 :root {
-  --bg: #100b1a;
-  --card: #1b1526;
-  --purple: #4b3369;
-  --purple-dark: #2c1f42;
-  --purple-light: #b98cf0;
-  --white: #f4f1f8;
-  --muted: #a99bc0;
-  --fonte: "Poppins", "Segoe UI", Arial, sans-serif;
+  --bg: #0e0b16;
+  --bg-alt: #120e1c;
+  --hero: #3a2a5c;
+  --card: #241c36;
+  --card-border: #34294f;
+  --purple: #a855f7;
+  --purple-dark: #8b3fe0;
+  --purple-light: #c084fc;
+  --white: #ffffff;
+  --text: #d9d2e6;
+  --muted: #b3a9c4;
+  --fonte: "Poppins", Arial, sans-serif;
 }
 
 /* ============ RESET BÁSICO ============ */
@@ -19,8 +23,19 @@
 
 body {
   background-color: var(--bg);
-  color: var(--white);
+  color: var(--text);
   font-family: var(--fonte);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -29,32 +44,288 @@ ul {
 
 .container {
   width: 1120px;
+  max-width: 92%;
   margin: 0 auto;
 }
 
 .secao {
-  padding: 90px 0;
+  padding: 100px 0;
 }
 
 .rotulo {
-  font-size: 14px;
+  text-align: center;
+  font-size: 13px;
   font-weight: 600;
-  color: var(--purple-light);
-  margin-bottom: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 10px;
 }
 
 .titulo-secao {
-  font-size: 32px;
+  text-align: center;
+  font-size: 38px;
   font-weight: 700;
-  margin-bottom: 40px;
+  color: var(--white);
+  margin-bottom: 18px;
 }
 
-/* ============ DEPOIMENTOS ============ */
-.secao-depoimentos .rotulo,
-.secao-depoimentos .titulo-secao {
+.texto-secao {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 56px;
+  color: var(--muted);
+}
+
+/* ============ BOTÕES ============ */
+.botao {
+  display: inline-block;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.botao--principal {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.botao--principal:hover {
+  background-color: var(--purple-dark);
+  transform: translateY(-2px);
+}
+
+.botao--pequeno {
+  padding: 11px 22px;
+  font-size: 12px;
+}
+
+/* ============ CABEÇALHO ============ */
+.cabecalho {
+  background-color: var(--hero);
+  padding: 22px 0;
+}
+
+.cabecalho__conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.marca__simbolo {
+  width: 34px;
+  height: 34px;
+  border: 3px solid var(--purple);
+  border-radius: 50%;
+}
+
+.marca__nome {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.navegacao__lista {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.navegacao__link {
+  font-size: 15px;
+  color: var(--white);
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.navegacao__link:hover {
+  color: var(--purple-light);
+  border-bottom-color: var(--purple-light);
+}
+
+/* ============ HERO ============ */
+.hero {
+  background-color: var(--hero);
+  padding: 120px 0 150px;
+}
+
+.hero__conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
   text-align: center;
 }
 
+.hero__titulo {
+  font-size: 54px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--white);
+  max-width: 800px;
+}
+
+.hero__texto {
+  font-size: 17px;
+  color: var(--text);
+  max-width: 620px;
+}
+
+/* ============ SERVIÇOS ============ */
+.servicos__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+
+.servico {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 320px;
+  background-color: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 30px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.servico:hover {
+  border-color: var(--purple);
+  transform: translateY(-6px);
+}
+
+.servico__titulo {
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.servico__texto {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* ============ SOBRE NÓS ============ */
+.sobre__conteudo {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 90px;
+}
+
+.sobre__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1 1 480px;
+}
+
+.sobre__subtitulo {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--purple);
+  line-height: 1.35;
+}
+
+.sobre__texto p {
+  color: var(--muted);
+}
+
+.sobre__imagem {
+  flex: 1 1 460px;
+  border-radius: 16px;
+  object-fit: cover;
+  height: 320px;
+}
+
+/* ============ NOSSA GENTE ============ */
+.equipe {
+  background-color: var(--card);
+  border-radius: 20px;
+  padding: 48px 40px;
+  text-align: center;
+}
+
+.equipe__titulo {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--purple-light);
+  margin-bottom: 10px;
+}
+
+.equipe__texto {
+  color: var(--muted);
+  max-width: 720px;
+  margin: 0 auto 36px;
+}
+
+.equipe__grid {
+  display: flex;
+  gap: 24px;
+}
+
+.pessoa {
+  flex: 1 1 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #33265099;
+  transition: transform 0.2s ease;
+}
+
+.pessoa:hover {
+  transform: translateY(-6px);
+}
+
+.pessoa__foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: #4b3a6e;
+}
+
+.pessoa__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #7c6a9c;
+}
+
+.pessoa__info {
+  background-color: var(--purple);
+  padding: 16px;
+}
+
+.pessoa__nome {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.pessoa__cargo {
+  font-size: 14px;
+  color: #f3e8ff;
+}
+
+/* ============ DEPOIMENTOS ============ */
 .lista-depoimentos {
   display: flex;
   gap: 24px;
@@ -97,11 +368,6 @@ ul {
 }
 
 /* ============ CONTATO ============ */
-.secao-contato .rotulo,
-.secao-contato .titulo-secao {
-  text-align: center;
-}
-
 .contato__grid {
   display: flex;
   align-items: center;
@@ -177,24 +443,62 @@ ul {
   min-height: 96px;
 }
 
-.botao {
-  display: inline-block;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  font-family: inherit;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+/* ============ RODAPÉ ============ */
+.rodape {
+  background-color: var(--bg-alt);
+  padding: 70px 0 40px;
+  text-align: center;
 }
 
-.botao--principal {
-  background-color: var(--purple-light);
-  color: #150c22;
+.rodape__marca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 44px;
 }
 
-.botao--principal:hover {
-  background-color: var(--purple-dark);
+.rodape__marca-nome {
+  font-size: 22px;
+  font-weight: 700;
   color: var(--white);
+}
+
+.rodape__colunas {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.rodape__coluna {
+  flex: 1 1 0;
+}
+
+.rodape__titulo {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+
+.rodape__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.rodape__link:hover {
+  color: var(--purple-light);
+}
+
+.rodape__copyright {
+  margin-top: 30px;
+  font-size: 14px;
+  color: var(--muted);
 }
