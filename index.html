@@ -1,0 +1,137 @@
+<!-- Checkpoint 03 — Front-End Design
+Integrantes:
+- Nome Completo — RM 000000
+- Nome Completo — RM 000000
+- Nome Completo — RM 000000
+-->
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkpoint 03 — Landing Page</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <p class="cabecalho__logo">Marca</p>
+      <nav class="navegacao">
+        <a href="#hero">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#equipe">Nossa gente</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ficam a cargo do resto do grupo -->
+    <section id="hero" class="secao"></section>
+    <section id="servicos" class="secao"></section>
+    <section id="sobre" class="secao"></section>
+    <section id="equipe" class="secao"></section>
+
+    <!-- ============ DEPOIMENTOS (minha parte) ============ -->
+    <section id="depoimentos" class="secao secao-depoimentos">
+      <div class="container">
+        <p class="rotulo">Nossos clientes</p>
+        <h2 class="titulo-secao">Depoimentos</h2>
+
+        <ul class="lista-depoimentos">
+          <li class="depoimento">
+            <span class="depoimento__avatar"></span>
+            <p class="depoimento__texto">
+              "A parceria trouxe mais clareza para nossos processos e acelerou
+              a entrega de um produto que estava parado há meses."
+            </p>
+            <p class="depoimento__autor">Ana Beatriz Silva</p>
+          </li>
+
+          <li class="depoimento">
+            <span class="depoimento__avatar"></span>
+            <p class="depoimento__texto">
+              "O time entendeu nosso negócio rapidamente e transformou
+              necessidades complexas em uma experiência simples para o
+              usuário."
+            </p>
+            <p class="depoimento__autor">Carlos Eduardo Lima</p>
+          </li>
+
+          <li class="depoimento">
+            <span class="depoimento__avatar"></span>
+            <p class="depoimento__texto">
+              "Conseguimos reduzir retrabalho e melhorar nossa operação sem
+              perder qualidade na experiência digital."
+            </p>
+            <p class="depoimento__autor">Fernanda Rocha</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO (minha parte) ============ -->
+    <section id="contato" class="secao secao-contato">
+      <div class="container">
+        <p class="rotulo">Fale com a gente</p>
+        <h2 class="titulo-secao">Contato</h2>
+
+        <div class="contato__grid">
+          <img
+            class="contato__imagem"
+            src="assets/contato.svg"
+            alt="Composição abstrata com círculos em tons de roxo"
+          />
+
+          <div class="contato__caixa">
+            <h3 class="contato__subtitulo">Conheça melhor nossas soluções</h3>
+            <p class="contato__descricao">
+              Preencha o formulário para entrar em contato com nossa equipe.
+            </p>
+
+            <form class="formulario-contato" action="#" method="post">
+              <div class="campo">
+                <label class="campo__rotulo" for="nome">Nome</label>
+                <input class="campo__input" type="text" id="nome" name="nome" />
+              </div>
+
+              <div class="campo">
+                <label class="campo__rotulo" for="email">E-mail</label>
+                <input class="campo__input" type="email" id="email" name="email" />
+              </div>
+
+              <div class="campo">
+                <label class="campo__rotulo" for="empresa">Empresa</label>
+                <input class="campo__input" type="text" id="empresa" name="empresa" />
+              </div>
+
+              <div class="campo">
+                <label class="campo__rotulo" for="mensagem">Mensagem</label>
+                <textarea
+                  class="campo__input campo__input--area"
+                  id="mensagem"
+                  name="mensagem"
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <button class="botao botao--principal" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; 2026 — Checkpoint 03</p>
+    </div>
+  </footer>
+
+</body>
+</html>
