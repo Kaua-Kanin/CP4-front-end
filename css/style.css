@@ -49,36 +49,12 @@ ul {
   margin-bottom: 40px;
 }
 
-/* ============ CABEÇALHO ============ */
-.cabecalho__conteudo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--purple);
-}
-
-.cabecalho__logo {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.navegacao {
-  display: flex;
-  gap: 28px;
-}
-
-.navegacao a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.navegacao a:hover {
-  color: var(--purple-light);
-}
-
 /* ============ DEPOIMENTOS ============ */
+.secao-depoimentos .rotulo,
+.secao-depoimentos .titulo-secao {
+  text-align: center;
+}
+
 .lista-depoimentos {
   display: flex;
   gap: 24px;
@@ -121,6 +97,11 @@ ul {
 }
 
 /* ============ CONTATO ============ */
+.secao-contato .rotulo,
+.secao-contato .titulo-secao {
+  text-align: center;
+}
+
 .contato__grid {
   display: flex;
   align-items: center;
@@ -216,13 +197,4 @@ ul {
 .botao--principal:hover {
   background-color: var(--purple-dark);
   color: var(--white);
-}
-
-/* ============ RODAPÉ ============ */
-.rodape {
-  padding: 24px 0;
-  border-top: 1px solid var(--purple);
-  text-align: center;
-  color: var(--muted);
-  font-size: 14px;
 }
